@@ -27,7 +27,7 @@ book_names = [
 st.sidebar.header("🎓 Траєкторія навчання")
 # Простая логика рекомендации: находим раздел с самым низким баллом
 scores = np.mean(st.session_state.student_tensor[0], axis=1)
-recommended_idx = np.argmin(scores)
+recommended_idx = int(np.argmin(scores))
 
 st.sidebar.success(f"Рекомендовано зараз:\n{book_names[recommended_idx]}")
 
